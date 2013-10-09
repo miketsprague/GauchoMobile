@@ -15,8 +15,8 @@
     
     NSRange cruftRange;
     
-    while ([source rangeOfString:@"Click to enter this course\" href=\"https://gauchospace.ucsb.edu/courses/course/view.php?id="].location != NSNotFound) {
-        cruftRange = [source rangeOfString:@"Click to enter this course\" href=\"https://gauchospace.ucsb.edu/courses/course/view.php?id="];
+    while ([source rangeOfString:@"gauchospace.ucsb.edu/courses/course/view.php?id="].location != NSNotFound) {
+        cruftRange = [source rangeOfString:@"gauchospace.ucsb.edu/courses/course/view.php?id="];
     
         source = [source substringFromIndex:cruftRange.location + cruftRange.length];
         
@@ -52,8 +52,8 @@
     if ([description rangeOfString:@" - "].location != NSNotFound) {
     NSRange cruftRange = [description rangeOfString:@" - "];
     description = [description substringFromIndex:cruftRange.location + cruftRange.length];
-    cruftRange = [description rangeOfString:@" - "];
-    description = [description substringFromIndex:cruftRange.location + cruftRange.length];
+  //  cruftRange = [description rangeOfString:@" - "];
+  //  description = [description substringFromIndex:cruftRange.location + cruftRange.length];
     
     int quarterEnd = [description rangeOfString:@" "].location;
     NSString *quarter = [description substringToIndex:quarterEnd];

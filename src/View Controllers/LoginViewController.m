@@ -210,7 +210,7 @@
     [[loadingView layer] removeAllAnimations];
     [[loadingView layer] addAnimation:animation forKey:@"position"];
     
-    if ([source rangeOfString:@"You are logged in as"].location != NSNotFound) {
+    if ([source rangeOfString:@"Welcome,"].location != NSNotFound) {
         
         //Snag our session key
         source = [source substringFromIndex:[source rangeOfString:@"sesskey="].location + 8];
