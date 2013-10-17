@@ -149,7 +149,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     NSString *title = [[[[[GMDataSource sharedDataSource] currentCourse] dashboardItems] objectAtIndex:section] dateRange];
-    if ([title isEqualToString:@""]) {
+    if ([title rangeOfString:@"-"].location == NSNotFound ) {
         title = @"Course Info";
     }
     

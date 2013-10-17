@@ -19,7 +19,7 @@
         return dashboardItems;
     }
     
-    NSArray *items = [source componentsSeparatedByString:@"class=\"weekdates\">"];
+    NSArray *items = [source componentsSeparatedByString:@"class=\"sectionname\">"];
     
     for (int i = 0; i < [items count]; i++) {
         NSString *currentItem = [items objectAtIndex:i];
